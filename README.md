@@ -11,6 +11,16 @@ requires:
 * PyStruct (>= 0.2.4)
 * scikit-learn (>= 0.18)
 
+My environment
+* Ubuntu 18.04
+* Python 3.6.9
+* Numpy == 1.19.5
+* Scipy == 1.5.4
+* Theano == 1.0.5
+* PyStruct == 0.3.2 (Modified utils/inference.py)
+* scikit-learn == 0.24.2
+* joblib == 1.1.0
+
 First, get the code from Github:
 ```sh
 git clone https://github.com/RWalecki/copula_ordinal_regression.git
@@ -19,14 +29,14 @@ git clone https://github.com/RWalecki/copula_ordinal_regression.git
 Next, go into the directory where the clone was placed and run the installation script:
 ```
 cd copula_ordinal_regression
-python setup.py install
+sudo python3 setup.py install
 ```
 
 ##### Test the installation:
 Once you have installed copula_ordinal_regression, you should run the nosetests before using it.
 Therefore, run:
 ```
-nosetests .
+nosetests3 .
 ```
 The tests should not take longer than a few seconds. You are ready to use copula_ordinal_regression. Enjoy!
 

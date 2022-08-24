@@ -13,13 +13,14 @@ def make_theano_tensors(list_of_datasets):
 
 def para_2_vector(para):
     u = []
-
+    
     keys=list(para.keys())
     keys.sort()
     for p in keys:
         if para[p].const:
             continue
-        u.append(para[p].value.flatten(0))
+#        u.append(para[p].value.flatten(0))
+        u.append(para[p].value.flatten())
     res = np.concatenate(u)
     return res
 

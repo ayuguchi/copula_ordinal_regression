@@ -5,7 +5,7 @@ import theano as T
 import theano.tensor as TT
 import itertools
 from pystruct.inference import inference_ad3
-from sklearn.covariance import GraphLasso
+from sklearn.covariance import GraphicalLasso
 
 from .tespo import tespo
 from .statistics import node_potn, edge_potn
@@ -63,7 +63,7 @@ class COR(BASE):
                 e2 = max(i)
                 edges.append([e1, e2])
         else:
-            lasso = GraphLasso(alpha = 0.1)
+            lasso = GraphicalLasso(alpha = 0.1)
             lasso.fit(y)
             graph = lasso.get_precision()!=0
             for i in range(graph.shape[0]):
